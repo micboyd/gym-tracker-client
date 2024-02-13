@@ -1,0 +1,7 @@
+<nav class='subnav'>
+	<ul>
+		<li *ngFor='let item of navItemsAccess'>
+			<a [routerLink]='item.route' routerLinkActive="active">{{ item.label }}</a>
+		</li>
+	</ul>
+</nav>

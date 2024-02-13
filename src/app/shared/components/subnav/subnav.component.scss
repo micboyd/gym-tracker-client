@@ -1,0 +1,26 @@
+@import 'abstracts/variables';
+
+.subnav {
+	ul {
+		display: flex;
+		list-style-type: none;
+		padding: 0;
+
+		li {
+			padding: $spacer;
+
+			&:first-child {
+				padding-left: 0;
+			}
+
+			a {
+				text-decoration: none;
+				padding-bottom: $small-spacer;
+
+				&.active {
+					border-bottom: 2px solid $pink;
+				}
+			}
+		}
+	}
+}

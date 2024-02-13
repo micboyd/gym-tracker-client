@@ -1,0 +1,20 @@
+<nav class="nav">
+
+	<button class="button button--icon-button" (click)="openNav()" *ngIf="!navOpen">
+		<i class="fa-solid fa-bars"></i>
+	</button>
+
+	<div *ngIf="navOpen" class="nav__screen">
+
+		<button  class="button button--icon-button nav__close" (click)="closeNav()">
+			<i class="fa-solid fa-xmark-large"></i>
+		</button>
+
+		<ul class="nav__list">
+			<li *ngFor="let item of navItems" class="nav__item">
+				<a class="header header--two" (click)="closeNav()" [routerLink]="item.route">{{ item.label }}</a>
+			</li>
+		</ul>
+
+	</div>
+</nav>

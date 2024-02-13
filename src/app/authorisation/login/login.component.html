@@ -1,0 +1,35 @@
+<section class='authentication'>
+	<form class='authentication__container' [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+		<h1 class='header header--one'>Login</h1>
+
+		<div class='input__container'>
+			<input
+				class='input'
+				placeholder="Email"
+				formControlName="email"
+				id="email"
+				type="text"
+				autocomplete="off"
+			/>
+
+			<input
+				class='input'
+				placeholder="Password"
+				formControlName="password"
+				id="password"
+				type="password"
+				autocomplete="off"
+			/>
+		</div>
+
+		<button class='button button--primary' type="submit">
+			<span *ngIf='loaded; else loading'>Login</span>
+		</button>
+
+		<p  class='error-message' *ngIf="errorMessage">{{ errorMessage }}</p>
+	</form>
+</section>
+
+<ng-template #loading>
+	<i class="fa-solid fa-spinner-third fa-spin"></i>
+</ng-template>

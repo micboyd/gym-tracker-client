@@ -1,0 +1,10 @@
+@import './abstracts/variables';
+@import './abstracts/mixins';
+
+.title-button {
+	@media screen and (min-width: $breakpoint-medium) {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
