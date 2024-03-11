@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+
+.margin-bottom-default {
+    margin-bottom: $spacer !important;
+}
+
+.margin-right-default {
+    margin-right: $spacer !important;
+}
+
+.margin-top-bottom-default {
+    margin: $spacer * 2 0 !important;
+}
+
+.no-margin-bottom {
+    margin-bottom: 0 !important;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.title-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $spacer;
+
+    .header {
+        margin-right: $spacer;
+    }
+}

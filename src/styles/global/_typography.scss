@@ -1,0 +1,84 @@
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+body,
+input {
+    font-family: $font-family-regular;
+    color: $black;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    font-family: $font-family-regular;
+    font-size: 1.6rem;
+}
+
+p,
+ul,
+ol,
+a,
+input {
+    font-size: $spacer;
+}
+
+p,
+ul,
+ol {
+    margin: 0 0 $spacer 0;
+}
+
+a {
+    color: $black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+label {
+    margin-bottom: $spacer;
+    font-size: 1.6rem;
+
+    @media screen and (min-width: $breakpoint-large) {
+        font-size: 2rem;
+    }
+}
+
+.header {
+    font-family: $font-family-bold;
+    font-weight: normal;
+    margin: 0;
+
+    &--one {
+        font-size: 4rem;
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: 4.5rem;
+        }
+    }
+    &--two {
+        font-size: 2.5rem;
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: 3rem;
+        }
+    }
+    &--three {
+        font-size: 2rem;
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: 2.5rem;
+        }
+    }
+    &--four {
+        font-size: 1.6rem;
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: 2rem;
+        }
+    }
+
+    &--no-margin {
+        margin: 0;
+    }
+}

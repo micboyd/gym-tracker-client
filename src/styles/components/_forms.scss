@@ -1,0 +1,65 @@
+@import '../abstracts/variables';
+
+.form {
+    margin-bottom: $spacer;
+
+    &__label {
+        display: block;
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid $light-grey;
+        background: $white;
+        padding: $spacer;
+        margin-bottom: $spacer * 2;
+
+        &--error {
+            border-bottom: $special-border solid $error-red;
+        }
+    }
+
+    &__card-input {
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid $white;
+        caret-color: $white;
+        text-align: center;
+        width: 12rem;
+        color: $white;
+        font-size: 2.5rem;
+
+        @media screen and (min-width: $breakpoint-large) {
+            font-size: 3rem;
+        }
+    }
+
+    &__select {
+        display: flex;
+        align-items: center;
+        background: $white;
+        justify-content: space-between;
+        padding-right: $spacer;
+
+        i {
+            font-size: 2rem;
+        }
+
+        select {
+            width: 100%;
+            height: 100%;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background: transparent;
+            border: 0;
+            padding: $spacer;
+            font-family: $font-family-regular;
+            font-size: $spacer;
+        }
+    }
+
+    &__error-message {
+        color: $error-red;
+        margin:0 0 $spacer 0;
+    }
+}

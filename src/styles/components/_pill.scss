@@ -1,0 +1,27 @@
+@import '../abstracts/variables';
+
+.pill {
+    &__item {
+        border-radius: $spacer;
+        padding: 0.75rem 1.75rem;
+        color: #fff;
+        font-size: $spacer;
+        letter-spacing: 0.05rem;
+        background: $purple;
+        width: 100%;
+        text-align: center;
+        margin-bottom: $spacer;
+
+        @media screen and (min-width: $breakpoint-large) {
+            width: auto;
+            margin: $spacer $spacer 0 0;
+        }
+    }
+
+    &__container {
+        @media screen and (min-width: $breakpoint-large) {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

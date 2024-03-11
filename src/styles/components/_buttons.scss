@@ -1,0 +1,38 @@
+@import '../abstracts/variables';
+
+.button {
+    cursor: pointer;
+    border: 0;
+    padding: 1rem $spacer;
+    background: $blue;
+    color: $white;
+    width: 100%;
+
+    &--default {
+        color: $black;
+        background: transparent;
+        padding-left: 0;
+    }
+
+    &--green {
+        background: $green;
+    }
+
+    &--red {
+        background: $error-red;
+    }
+
+    &--full {
+        width: 100%;
+    }
+
+    &--hidden {
+        color: $black;
+        background: none;
+        border: none;
+    }
+
+    &[disabled] {
+        background: $dark-grey;
+    }
+}

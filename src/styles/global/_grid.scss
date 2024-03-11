@@ -1,0 +1,48 @@
+@import '../abstracts/variables';
+
+.container {
+    max-width: 1300px;
+    padding: 0 $spacer * 2;
+    margin: 5rem auto;
+
+    @media screen and (min-width: $breakpoint-medium) {
+        margin: 10rem auto;
+    }
+}
+
+.section {
+    padding: $spacer * 2 0;
+
+    &--no-top {
+        padding-top: 0;
+    }
+}
+
+.grid {
+    display: grid;
+    grid-gap: $spacer * 2;
+
+    &--two {
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &--three {
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &--four {
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &--five {
+        @media screen and (min-width: $breakpoint-medium) {
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}

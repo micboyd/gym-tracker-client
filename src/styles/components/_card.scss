@@ -1,0 +1,20 @@
+@import '../abstracts/variables';
+
+.card {
+    background: $white;
+    padding: $spacer;
+    border-radius: $regular-border-radius;
+    margin-bottom: $spacer;
+
+    &--black {
+        background: $black;
+        color: $white;
+        text-align: center;
+    }
+
+    &--purple {
+        background: $purple;
+        color: $white;
+        text-align: center;
+    }
+}
