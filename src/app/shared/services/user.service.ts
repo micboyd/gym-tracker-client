@@ -9,4 +9,8 @@ export class UserService {
 	get currentUser(): string {
 		return localStorage.getItem('userId') || '';
 	}
+
+    get currentUserFullName(): string {
+        return localStorage.getItem('fullName') || '';
+    }
 }

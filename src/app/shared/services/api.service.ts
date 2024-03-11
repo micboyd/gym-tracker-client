@@ -19,11 +19,10 @@ export class ApiService {
 		endpointUrl: string,
 		identifier?: string[]
 	): Observable<any> {
-		const payloadJson = JSON.stringify(payload);
 
 		return this.http.post(
 			this.formattedUrl(endpointUrl, identifier),
-			payloadJson,
+            this.json(payload),
 			{
 				headers: this.headers,
 			}
@@ -35,11 +34,10 @@ export class ApiService {
 		endpointUrl: string,
 		identifier?: string[]
 	): Observable<any> {
-		const payloadJson = JSON.stringify(payload);
 
 		return this.http.put(
 			this.formattedUrl(endpointUrl, identifier),
-			payloadJson,
+            this.json(payload),
 			{
 				headers: this.headers,
 			}
@@ -53,6 +51,10 @@ export class ApiService {
 	delete(endpointUrl: string, identifier?: string[]): Observable<any> {
 		return this.http.delete(this.formattedUrl(endpointUrl, identifier));
 	}
+
+    json<T>(payload: T) {
+        return JSON.stringify(payload);
+    }
 
 	private formattedUrl(endpointUrl: string, identifier?: string[]): string {
 		let formattedUrl;

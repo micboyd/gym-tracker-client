@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { AuthService } from '../authorisation.service';
@@ -23,17 +23,16 @@ export class LoginComponent implements OnInit {
 
 	constructor(
 		private router: Router,
-		private fb: FormBuilder,
 		private authService: AuthService
 	) {}
 
 	ngOnInit(): void {
 		localStorage.clear();
 
-		this.loginForm = this.fb.group({
-			email: ['', [Validators.required, Validators.email]],
-			password: ['', Validators.required],
-		});
+        this.loginForm = new FormGroup({
+            email: new FormControl(''),
+            password: new FormControl('')
+        });
 	}
 
 	onSubmit(): void {
@@ -62,6 +61,6 @@ export class LoginComponent implements OnInit {
 
 	private storeLoginData(currentUser: SessionDetails): void {
 		this.authService.storeSessionDetails(currentUser);
-		void this.router.navigate(['/home/dashboard']);
+		void this.router.navigate(['/dashboard']);
 	}
 }

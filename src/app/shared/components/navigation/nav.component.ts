@@ -1,13 +1,13 @@
 import { Component } from "@angular/core";
-import {NavigationItem} from "../../models/NavigationItem";
+import { NavigationItem } from "../../models/NavigationItem";
 
 @Component({
-	selector: 'app-nav',
+	selector: 'app-navigation',
 	templateUrl: 'nav.component.html',
 	styleUrls: ['nav.component.scss']
 })
 
-export class NavComponent {
+export class NavigationComponent {
 
 	navOpen: boolean;
 	navItems: Array<NavigationItem>;
